@@ -1,29 +1,29 @@
-shell:
-    program: /bin/zsh
-    args:
-    - -l
-    - -c
-    - "tmux"
+# shell:
+#     program: /bin/zsh
+#     args:
+#     - -l
+#     - -c
+#     - "tmux"
 
 # Font
 font:
     normal: 
-      family: inconsolata 
+      family: Hack 
       style: Regular
 
     bold:
-      family: inconsolata
+      family: Hack
       style: Bold
 
     italic:
-      family: inconsolata
+      family: Hack
       style: Italic
 
     bold_italic:
-      family: inconsolata 
+      family: Hack 
       style: Bold Italic
 
-    size: 12
+    size: 10
 
 # Colors (Dracula)
 colors:

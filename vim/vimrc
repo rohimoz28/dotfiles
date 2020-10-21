@@ -1,4 +1,3 @@
-testing
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set exrc
@@ -29,6 +28,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
+Plugin 'shawncplus/phpcomplete.vim'
+
+
 " ===== CtrlP =====
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -110,8 +112,8 @@ nnoremap <C-M> :bnext<CR>
 nnoremap <C-N> :bprev<CR>
 nnoremap <C-C> :bdelete<CR>
 
-
-
+inoremap jh <Esc>
+nmap <leader>ai mzgg=G`z`
 " ==== Syntastic ====
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -151,6 +153,17 @@ let g:ycm_min_num_identifier_candidate_chars = 4
 let g:ycm_enable_diagnostic_highlighting = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+" ==== OmniFunc Autocompletion ====
+filetype plugin on
+au FileType php set omnifunc=phpcomplete#CompletePHP
+
+" You might also find this useful
+" PHP Generated Code Highlights (HTML & SQL)                                              
+
+let php_sql_query=1                                                                                        
+let php_htmlInStrings=1
+
 
 " ==== Easymotion ====
 let g:EasyMotion_do_mapping = 0

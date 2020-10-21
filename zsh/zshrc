@@ -107,6 +107,12 @@ alias psyu='sudo pacman -Syu'
 
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 
+alias laravel='~/.config/composer/vendor/bin/laravel'
+
+# FASD config
+eval "$(fasd --init auto)"
+
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -124,3 +130,8 @@ export GUI=1
 export NNN_OPENER=~/.config/nnn/plugins/nuke
 #powerline-daemon -q
 #. /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# config laravel
+export PATH="~/.config/composer/vendor/bin:$PATH"
