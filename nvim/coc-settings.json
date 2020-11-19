@@ -6,17 +6,11 @@
     "graphql",
     "html",
     "yaml",
+    "php",
     "json",
     "python"
   ],
-  // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false,
-  "snippets.ultisnips.directories": [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ],
-  // php config
+  //php LSP
   "languageserver": {
     "intelephense": {
       "command": "intelephense",
@@ -31,11 +25,20 @@
       }
     }
   },
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "~/.config/nvim/utils/snips"
+  ],
   // explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
+    ".": "toggleHidden",
+    "R": "refresh",
     "<cr>": [
       "expandable?",
       "expand",

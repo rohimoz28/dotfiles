@@ -104,11 +104,18 @@ alias nnn='nnn -c -H'
 
 alias ssyu='yay -Syu'
 alias psyu='sudo pacman -Syu'
+alias fast='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
 
 alias lg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
 
 alias laravel='~/.config/composer/vendor/bin/laravel'
+alias code='code --disable-gpu'
 
+alias mux='pgrep -vx tmux > /dev/null && \
+		tmux new -d -s delete-me && \
+		tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
+		tmux kill-session -t delete-me && \
+		tmux attach || tmux attach'
 # FASD config
 eval "$(fasd --init auto)"
 
